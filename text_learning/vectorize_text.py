@@ -26,8 +26,12 @@ from parse_out_email_text import parseOutText
 from_sara  = open("from_sara.txt", "r")
 from_chris = open("from_chris.txt", "r")
 
+
+
 from_data = []
 word_data = []
+
+parseOutText(from_sara)
 
 ### temp_counter is a way to speed up the development--there are
 ### thousands of emails from Sara and Chris, so running over all of them
@@ -71,5 +75,3 @@ pickle.dump( from_data, open("your_email_authors.pkl", "w") )
 
 
 ### in Part 4, do TfIdf vectorization here
-
-

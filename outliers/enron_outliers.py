@@ -14,6 +14,9 @@ data = featureFormat(data_dict, features)
 
 
 ### your code below
-
-
-
+for name in data_dict:
+    # float() does not include NaN values
+    bonus = float(data_dict[name]["bonus"])
+    salary = float(data_dict[name]["salary"])
+    if bonus >= 5000000 and salary >= 1000000:
+        print name, "bonus: ", data_dict[name]["bonus"], "salary: ", data_dict[name]["salary"]
